@@ -1,0 +1,11 @@
+{
+    "name": "raphael/mvc-base",
+    "description": "MVC Structure",
+    "type": "false",
+    "authors": [{
+            "name": "Raphael David Leforte",
+            "email": "leforte.dev@gmail.com"
+        }
+    ],
+    "require": {}
+}
