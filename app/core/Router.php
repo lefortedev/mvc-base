@@ -4,8 +4,6 @@ namespace App\Core;
 
 Use App\Controllers\Errors\HttpErrorController;
 
-require_once 'functions.php';
-
 class Router {
     public function dispatch($url){
 
@@ -14,7 +12,7 @@ class Router {
 
         $controllerName = $parts[0] ?? "Home";
         $actionName = $parts[1] ?? "index";
-        // dd($actionName, $controllerName);
+        dd($actionName, $controllerName);
 
         $controllerName = 'App\Controllers\\' . ucfirst($controllerName) . "Controller";
 
