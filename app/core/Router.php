@@ -1,6 +1,10 @@
 <?php
-require_once('../app/controllers/HomeController.php');
-require_once('../app/controllers/erros/HttpErrorController.php');
+
+namespace App\Core;
+
+Use App\Controllers\Errors\HttpErrorController;
+
+require_once 'functions.php';
 
 class Router {
     public function dispatch($url){
@@ -10,8 +14,9 @@ class Router {
 
         $controllerName = $parts[0] ?? "Home";
         $actionName = $parts[1] ?? "index";
+        // dd($actionName, $controllerName);
 
-        $controllerName = ucfirst($controllerName) . "Controller";
+        $controllerName = 'App\Controllers\\' . ucfirst($controllerName) . "Controller";
 
         if(!class_exists($controllerName))
         {

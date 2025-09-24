@@ -1,13 +1,16 @@
 <?php
-require_once __DIR__ . "/../core/Controller.php";
-require_once __DIR__ . "/../models/Usuario.php";
+
+namespace App\Controllers;
+
+Use App\Core\Controller;
+Use App\Models\User;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        $usuario = new Usuario();
-        $data = $usuario->getUserData();
+        $user = new User();
+        $data = $user->getUserData();
 
         $this->view("home/index", $data);
         return;
