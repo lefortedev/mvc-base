@@ -12,7 +12,7 @@ class Router {
 
         $controllerName = $parts[0] ?? "Home";
         $actionName = $parts[1] ?? "index";
-        dd($actionName, $controllerName);
+        // dd($actionName, $controllerName);
 
         $controllerName = 'App\Controllers\\' . ucfirst($controllerName) . "Controller";
 

@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 Use App\Core\Controller;
+use App\Core\Database;
 Use App\Models\User;
 
 class HomeController extends Controller
